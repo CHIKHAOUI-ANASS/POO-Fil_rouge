@@ -1,0 +1,9 @@
+# Fichiers compilés
+build/
+*.class
+
+
+# Archive du projet
+rendu_cc1.zip
+
+# Fichiers temporaires
