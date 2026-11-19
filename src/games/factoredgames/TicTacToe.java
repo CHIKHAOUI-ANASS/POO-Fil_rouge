@@ -3,7 +3,7 @@ package games.factoredgames;
 /** Une partie de morpion à deux joueurs sur une grille 3 x 3. */
 public class TicTacToe extends AbstractGame {
 	
-    private String[][] board;   // board[rangée][colonne] : nom du joueur, ou null si la case est vide
+    protected String[][] board;   // board[rangée][colonne] : nom du joueur, ou null si la case est vide
 
     /** Crée une partie : j1 joue en premier. */
     public TicTacToe(String j1, String j2) {
@@ -16,7 +16,7 @@ public class TicTacToe extends AbstractGame {
 	protected void doExecute(int coup){
 		int row = coup / 3;
 		int column = coup % 3;
-		board[row][column] = CurrentPlayer;
+		board[row][column] = currentPlayer;
 	}
 		
 	/** Un coup est valide si la case existe et si elle est encore vide. */

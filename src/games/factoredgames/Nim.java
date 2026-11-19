@@ -53,6 +53,6 @@ public class Nim extends AbstractGame {
         }
         // Celui qui retire la dernière allumette perd. removeMatches a déjà
         // passé la main à l'autre joueur : le joueur courant est donc le gagnant.
-        return CurrentPlayer;
+        return currentPlayer;
     }
 }

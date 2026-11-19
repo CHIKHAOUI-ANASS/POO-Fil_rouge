@@ -3,7 +3,7 @@ package games.factoredgames;
 import java.util.Scanner;
 
 /** Classe exécutable : une partie de Nim à deux joueurs, au clavier. */
-public class Demo {
+public class NimDemo {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
@@ -31,7 +31,7 @@ public class Demo {
             System.out.println("Combien d'allumettes voulez-vous retirer ?");
             int nbMatches = scanner.nextInt();
             if (jeu.isValid(nbMatches)) {
-                jeu.removeMatches(nbMatches);
+                jeu.execute(nbMatches);
             } else {
                 System.out.println("Nombre d'allumettes invalide");
             }

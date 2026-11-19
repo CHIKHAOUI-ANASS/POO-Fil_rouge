@@ -2,10 +2,15 @@ package games.factoredgames;
 
 import gamestests.factoredgames.NimTests;
 import gamestests.factoredgames.TicTacToeTests;
+import gamestests.factoredgames.AbstractGameTests;
+import gamestests.factoredgames.TicTacToeWithHintsTests;
 
 public class Test{
 	public static void main(String[] args){
 		boolean ok = true;
+        AbstractGameTests abstractGameTester = new AbstractGameTests();
+        ok = ok && abstractGameTester.testGetCurrentPlayer();
+        ok = ok && abstractGameTester.testExecute();
 		NimTests nimTester = new NimTests();
 		ok = ok && nimTester.testExtends();
 		ok = ok && nimTester.testGetCurrentPlayer();
@@ -20,7 +25,16 @@ public class Test{
 		ok = ok && ticTacToeTester.testWins(); // si wins() est implementee
 		ok = ok && ticTacToeTester.testGetWinner();
 		ok = ok && ticTacToeTester.testIsOver();
+        TicTacToeWithHintsTests hintsTester = new TicTacToeWithHintsTests();
+        ok = ok && hintsTester.testGetCurrentPlayer();
+        ok = ok && hintsTester.testExecuteAndIsValid();
+        ok = ok && hintsTester.testWins();
+        ok = ok && hintsTester.testGetWinner();
+        ok = ok && hintsTester.testIsOver();
+        ok = ok && hintsTester.testHints();
 		System.out.println(ok ? "All tests OK" : "At least one test KO");
 		}
 	
 	}
+	
+	
